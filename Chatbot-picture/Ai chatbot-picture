@@ -1,0 +1,138 @@
+
+<div style="background: var(--color-background-secondary); border-radius: var(--border-radius-xl); padding: 24px; max-width: 420px; margin: 0 auto;">
+
+  <div style="background: var(--color-background-primary); border-radius: 16px; border: 0.5px solid var(--color-border-tertiary); overflow: hidden; font-family: var(--font-sans);">
+
+    <!-- Chat header -->
+    <div style="background: #1a1a2e; padding: 14px 18px; display: flex; align-items: center; gap: 12px;">
+      <div style="position: relative;">
+        <div style="width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg, #4f8ef7, #7c3aed); display: flex; align-items: center; justify-content: center;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="8" r="3" fill="white" opacity="0.9"/>
+            <path d="M6 18c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="white" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.7"/>
+            <path d="M19 5l1.5-1.5M19 10h2M16 3l1-2" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+          </svg>
+        </div>
+        <div style="position: absolute; bottom: 1px; right: 1px; width: 10px; height: 10px; border-radius: 50%; background: #22c55e; border: 2px solid #1a1a2e;"></div>
+      </div>
+      <div>
+        <div style="color: white; font-size: 14px; font-weight: 500; line-height: 1.2;">Nova AI Asszisztens</div>
+        <div style="color: rgba(255,255,255,0.5); font-size: 11px;">Online • Azonnal válaszol</div>
+      </div>
+      <div style="margin-left: auto; display: flex; gap: 8px;">
+        <div style="width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.3);"></div>
+        <div style="width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.3);"></div>
+        <div style="width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.3);"></div>
+      </div>
+    </div>
+
+    <!-- Messages area -->
+    <div style="padding: 18px 16px; display: flex; flex-direction: column; gap: 14px; background: var(--color-background-primary);">
+
+      <!-- Bot message 1 -->
+      <div style="display: flex; gap: 9px; align-items: flex-start;">
+        <div style="width: 28px; height: 28px; border-radius: 50%; background: linear-gradient(135deg, #4f8ef7, #7c3aed); flex-shrink: 0; display: flex; align-items: center; justify-content: center; margin-top: 2px;">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.5" fill="white"/><path d="M6 19c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+        </div>
+        <div style="max-width: 78%;">
+          <div style="background: #f0f4ff; border-radius: 4px 16px 16px 16px; padding: 11px 14px;">
+            <p style="margin: 0; font-size: 13.5px; color: #1e1e2e; line-height: 1.55;">Üdvözlöm! 👋 Én vagyok Nova, az Ön digitális asszisztense. Miben segíthetek ma?</p>
+          </div>
+          <div style="font-size: 10.5px; color: var(--color-text-tertiary); margin-top: 4px; padding-left: 4px;">10:32</div>
+        </div>
+      </div>
+
+      <!-- User message 1 -->
+      <div style="display: flex; justify-content: flex-end;">
+        <div style="max-width: 75%;">
+          <div style="background: #4f8ef7; border-radius: 16px 4px 16px 16px; padding: 11px 14px;">
+            <p style="margin: 0; font-size: 13.5px; color: white; line-height: 1.55;">Sziasztok! Szeretném tudni, hogy mikor van nyitva az üzletük szombaton?</p>
+          </div>
+          <div style="font-size: 10.5px; color: var(--color-text-tertiary); margin-top: 4px; text-align: right; padding-right: 4px;">10:33</div>
+        </div>
+      </div>
+
+      <!-- Bot message 2 -->
+      <div style="display: flex; gap: 9px; align-items: flex-start;">
+        <div style="width: 28px; height: 28px; border-radius: 50%; background: linear-gradient(135deg, #4f8ef7, #7c3aed); flex-shrink: 0; display: flex; align-items: center; justify-content: center; margin-top: 2px;">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.5" fill="white"/><path d="M6 19c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+        </div>
+        <div style="max-width: 78%;">
+          <div style="background: #f0f4ff; border-radius: 4px 16px 16px 16px; padding: 11px 14px;">
+            <p style="margin: 0; font-size: 13.5px; color: #1e1e2e; line-height: 1.55;">Szombaton <strong style="color: #4f8ef7;">9:00–14:00</strong> között vagyunk nyitva. 🕘 Van még kérdése, esetleg szeretne időpontot foglalni?</p>
+          </div>
+          <div style="font-size: 10.5px; color: var(--color-text-tertiary); margin-top: 4px; padding-left: 4px;">10:33</div>
+        </div>
+      </div>
+
+      <!-- User message 2 -->
+      <div style="display: flex; justify-content: flex-end;">
+        <div style="max-width: 75%;">
+          <div style="background: #4f8ef7; border-radius: 16px 4px 16px 16px; padding: 11px 14px;">
+            <p style="margin: 0; font-size: 13.5px; color: white; line-height: 1.55;">Igen! Szeretnék szombat délelőttre időpontot foglalni.</p>
+          </div>
+          <div style="font-size: 10.5px; color: var(--color-text-tertiary); margin-top: 4px; text-align: right; padding-right: 4px;">10:34</div>
+        </div>
+      </div>
+
+      <!-- Bot message 3 -->
+      <div style="display: flex; gap: 9px; align-items: flex-start;">
+        <div style="width: 28px; height: 28px; border-radius: 50%; background: linear-gradient(135deg, #4f8ef7, #7c3aed); flex-shrink: 0; display: flex; align-items: center; justify-content: center; margin-top: 2px;">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.5" fill="white"/><path d="M6 19c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+        </div>
+        <div style="max-width: 82%;">
+          <div style="background: #f0f4ff; border-radius: 4px 16px 16px 16px; padding: 11px 14px;">
+            <p style="margin: 0 0 10px; font-size: 13.5px; color: #1e1e2e; line-height: 1.55;">Szuper! Válasszon az elérhető időpontok közül 👇</p>
+            <div style="display: flex; flex-direction: column; gap: 7px;">
+              <div style="background: white; border: 1px solid #4f8ef7; border-radius: 10px; padding: 8px 12px; font-size: 12.5px; color: #4f8ef7; font-weight: 500; cursor: pointer;">📅 Szombat, 10:00</div>
+              <div style="background: white; border: 1px solid #e0e7ff; border-radius: 10px; padding: 8px 12px; font-size: 12.5px; color: #6b7280; cursor: pointer;">📅 Szombat, 11:00</div>
+              <div style="background: white; border: 1px solid #e0e7ff; border-radius: 10px; padding: 8px 12px; font-size: 12.5px; color: #6b7280; cursor: pointer;">📅 Szombat, 12:00</div>
+            </div>
+          </div>
+          <div style="font-size: 10.5px; color: var(--color-text-tertiary); margin-top: 4px; padding-left: 4px;">10:34</div>
+        </div>
+      </div>
+
+      <!-- User message 3 -->
+      <div style="display: flex; justify-content: flex-end;">
+        <div style="max-width: 70%;">
+          <div style="background: #4f8ef7; border-radius: 16px 4px 16px 16px; padding: 11px 14px;">
+            <p style="margin: 0; font-size: 13.5px; color: white; line-height: 1.55;">A 10 órás időpont tökéletes lesz!</p>
+          </div>
+          <div style="font-size: 10.5px; color: var(--color-text-tertiary); margin-top: 4px; text-align: right; padding-right: 4px;">10:35</div>
+        </div>
+      </div>
+
+      <!-- Bot message 4 - confirmation -->
+      <div style="display: flex; gap: 9px; align-items: flex-start;">
+        <div style="width: 28px; height: 28px; border-radius: 50%; background: linear-gradient(135deg, #4f8ef7, #7c3aed); flex-shrink: 0; display: flex; align-items: center; justify-content: center; margin-top: 2px;">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.5" fill="white"/><path d="M6 19c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="white" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+        </div>
+        <div style="max-width: 82%;">
+          <div style="background: #edfdf4; border: 1px solid #bbf7d0; border-radius: 4px 16px 16px 16px; padding: 11px 14px;">
+            <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 6px;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#22c55e"/><path d="M7 12l4 4 6-6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span style="font-size: 12px; font-weight: 500; color: #166534;">Időpont rögzítve!</span>
+            </div>
+            <p style="margin: 0; font-size: 13px; color: #1e1e2e; line-height: 1.5;">Szombat 10:00-ra lefoglaltuk az időpontját. Megerősítő e-mailt küldtünk Önnek. Szép napot! ✨</p>
+          </div>
+          <div style="font-size: 10.5px; color: var(--color-text-tertiary); margin-top: 4px; padding-left: 4px;">10:35</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Input area -->
+    <div style="border-top: 0.5px solid var(--color-border-tertiary); padding: 12px 14px; display: flex; align-items: center; gap: 10px; background: var(--color-background-primary);">
+      <div style="flex: 1; background: var(--color-background-secondary); border-radius: 20px; padding: 9px 15px; font-size: 13px; color: var(--color-text-tertiary); border: 0.5px solid var(--color-border-tertiary);">Írjon üzenetet...</div>
+      <div style="width: 34px; height: 34px; border-radius: 50%; background: #4f8ef7; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Branding tag -->
+  <div style="text-align: center; margin-top: 12px; font-size: 11px; color: var(--color-text-tertiary);">Powered by AI · Azonnal válaszol · 24/7</div>
+
+</div>
