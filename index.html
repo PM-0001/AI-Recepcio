@@ -790,7 +790,7 @@
       }
       #hero-content p { font-size: 16px !important; max-width: 100% !important; text-align: center !important; }
       #hero-content .fade-up { display: flex !important; justify-content: center !important; }
-      #hero-chat { display: none !important; }
+      #hero-chat { display: none !important; } /* már inline none, de biztosítjuk */
 
       /* Section base padding */
       .section { padding: 64px 20px !important; }
@@ -843,6 +843,11 @@
         grid-template-columns: 1fr !important;
         gap: 24px !important;
       }
+    }
+
+    /* ── Tablet + Desktop: chat widget megjelenítése ── */
+    @media (min-width: 769px) {
+      #hero-chat { display: block !important; }
     }
 
     /* ── Tablet breakpoint: 1024px ── */
@@ -967,7 +972,7 @@
     </div>
 
     <!-- Right: chat widget -->
-    <div id="hero-chat" class="fade-up delay-2" style="flex-shrink:0;width:330px;">
+    <div id="hero-chat" class="fade-up delay-2" style="flex-shrink:0;width:330px;display:none;">
       <div style="border-radius:18px;overflow:hidden;border:1px solid rgba(204,0,0,0.2);box-shadow:0 24px 80px rgba(160,160,170,0.12),0 4px 20px rgba(0,0,0,0.5);">
 
         <!-- Chat header -->
