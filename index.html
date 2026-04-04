@@ -1091,6 +1091,13 @@
 
   </div>
 </section>
+<script>
+  // Mobilon azonnal töröljük a chat widgetet a DOM-ból
+  if (window.innerWidth <= 768) {
+    var hc = document.getElementById('hero-chat');
+    if (hc) hc.parentNode.removeChild(hc);
+  }
+</script>
 
 
 <!-- ─── WHY PM'S SAAS? ─────────────────────────────────────────────────── -->
