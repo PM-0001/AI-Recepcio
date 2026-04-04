@@ -774,7 +774,10 @@
       .mobile-menu-btn { display: flex !important; }
 
       /* Hero section */
-      #hero-section { height: auto !important; min-height: 100svh !important; }
+      #hero-section { height: auto !important; min-height: 100dvh !important; }
+      /* Aurora teljes magasságig kitöltése mobilon */
+      #hero-bottom-gradient { background: linear-gradient(to bottom, transparent 80%, rgba(0,0,0,0.6) 100%) !important; }
+      #hero-blur-band { height: 60px !important; }
       #hero-content {
         flex-direction: column !important;
         padding: 96px 20px 48px !important;
@@ -959,9 +962,9 @@
   <!-- Vignette -->
   <div style="position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 0%,rgba(0,0,0,0.82) 100%);pointer-events:none;z-index:1;" aria-hidden="true"></div>
   <!-- Bottom gradient fade -->
-  <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 55%,rgba(0,0,0,0.85) 100%);pointer-events:none;z-index:1;"></div>
+  <div id="hero-bottom-gradient" style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 55%,rgba(0,0,0,0.85) 100%);pointer-events:none;z-index:1;"></div>
   <!-- Blur transition band at the bottom -->
-  <div style="position:absolute;bottom:0;left:0;right:0;height:180px;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);pointer-events:none;z-index:2;-webkit-mask-image:linear-gradient(to bottom,transparent,black 60%);mask-image:linear-gradient(to bottom,transparent,black 60%);"></div>
+  <div id="hero-blur-band" style="position:absolute;bottom:0;left:0;right:0;height:180px;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);pointer-events:none;z-index:2;-webkit-mask-image:linear-gradient(to bottom,transparent,black 60%);mask-image:linear-gradient(to bottom,transparent,black 60%);"></div>
   <!-- Final solid color cap so there's no hard edge -->
   <div style="position:absolute;bottom:0;left:0;right:0;height:40px;background:#000000;pointer-events:none;z-index:3;"></div>
 
