@@ -2118,7 +2118,7 @@ window.submitBooking = function() {
 <!-- ── Chat Widget Sequential Message Animation ───────────────────────── -->
 <script>
 (function initChatAnim() {
-  if (window.innerWidth <= 1024) return; // ne fusson mobilon / tableten
+  if (window.innerWidth <= 768) return; // ne fusson mobilon
   var typing = document.getElementById('chat-typing');
   var msgs = [
     document.getElementById('cmsg-0'),
