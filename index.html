@@ -25,23 +25,6 @@
     body { background-color: var(--bg); color: var(--text-dark); margin: 0; }
     a { text-decoration: none; color: inherit; }
 
-    /* Voiceflow widget méret korlátozás mobilon */
-    @media (max-width: 768px) {
-      #voiceflow-chat,
-      [id*="voiceflow"],
-      [class*="vfrc-widget"] {
-        position: fixed !important;
-        max-height: 55vh !important;
-        height: 55vh !important;
-        width: calc(100vw - 32px) !important;
-        max-width: calc(100vw - 32px) !important;
-        bottom: 80px !important;
-        right: 16px !important;
-        border-radius: 16px !important;
-        overflow: hidden !important;
-      }
-    }
-
     /* Navbar */
     .navbar {
       background: transparent;
