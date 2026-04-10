@@ -2377,70 +2377,57 @@ document.addEventListener('click', function(e) {
 </script>
 
 <script type="text/javascript">
-  (function() {
-    var loaded = false;
-    function loadVoiceflow() {
-      if (loaded) return;
-      loaded = true;
-      ['scroll','mousemove','touchstart','keydown','click'].forEach(function(e) {
-        window.removeEventListener(e, loadVoiceflow, { passive: true });
-      });
-      clearTimeout(fallbackTimer);
-      (function(d, t) {
-        var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
-        v.onload = function() {
-          window.voiceflow.chat.load({
-            verify: { projectID: '69d517563b6a7a856cfcdd34' },
-            url: 'https://general-runtime.voiceflow.com',
-            versionID: 'production',
-            voice: {
-              url: "https://runtime-api.voiceflow.com"
-            },
-            assistant: {
-              stylesheet: `
-                :host {
-                  --vfrc-chat-width: 380px !important;
-                  --vfrc-chat-height: 560px !important;
-                }
-                .vfrc-widget--chat,
-                .vfrc-chat,
-                [class*="chat-window"],
-                [class*="chatWindow"] {
-                  width: 380px !important;
-                  height: 560px !important;
-                  max-height: 70vh !important;
-                  max-width: calc(100vw - 32px) !important;
-                  border-radius: 16px !important;
-                  overflow: hidden !important;
-                }
-                @media (max-width: 768px) {
-                  .vfrc-widget--chat,
-                  .vfrc-chat,
-                  [class*="chat-window"],
-                  [class*="chatWindow"] {
-                    width: calc(100vw - 32px) !important;
-                    height: 55vh !important;
-                    max-height: 55vh !important;
-                    min-height: unset !important;
-                    bottom: 80px !important;
-                    right: 16px !important;
-                    border-radius: 16px !important;
-                  }
-                }
-              `
+  (function(d, t) {
+    var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+    v.onload = function() {
+      window.voiceflow.chat.load({
+        verify: { projectID: '69d517563b6a7a856cfcdd34' },
+        url: 'https://general-runtime.voiceflow.com',
+        versionID: 'production',
+        voice: {
+          url: "https://runtime-api.voiceflow.com"
+        },
+        assistant: {
+          stylesheet: `
+            :host {
+              --vfrc-chat-width: 380px !important;
+              --vfrc-chat-height: 560px !important;
             }
-          });
-        };
-        v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs";
-        v.type = "text/javascript";
-        s.parentNode.insertBefore(v, s);
-      })(document, 'script');
-    }
-    ['scroll','mousemove','touchstart','keydown','click'].forEach(function(e) {
-      window.addEventListener(e, loadVoiceflow, { passive: true, once: true });
-    });
-    var fallbackTimer = setTimeout(loadVoiceflow, 5000);
-  })();
+            .vfrc-widget--chat,
+            .vfrc-chat,
+            [class*="chat-window"],
+            [class*="chatWindow"] {
+              width: 380px !important;
+              height: 560px !important;
+              max-height: 70vh !important;
+              max-width: calc(100vw - 32px) !important;
+              border-radius: 16px !important;
+              overflow: hidden !important;
+            }
+            @media (max-width: 768px) {
+              .vfrc-widget--chat,
+              .vfrc-chat,
+              [class*="chat-window"],
+              [class*="chatWindow"] {
+                width: calc(100vw - 32px) !important;
+                height: 55vh !important;
+                max-height: 55vh !important;
+                min-height: unset !important;
+                bottom: 80px !important;
+                right: 16px !important;
+                border-radius: 16px !important;
+              }
+            }
+          `
+        }
+      }).then(function() {
+        window.voiceflow.chat.open();
+      });
+    };
+    v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs";
+    v.type = "text/javascript";
+    s.parentNode.insertBefore(v, s);
+  })(document, 'script');
 </script>
 
 </body>
