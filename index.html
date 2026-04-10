@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" type="image/png" sizes="512x512" href="brand-assets/favicon.png"/>
   <link rel="icon" type="image/x-icon" href="favicon.ico"/>
-  <link rel="icon" type="image/png" href="brand-assets/favicon.png"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI Recepció — AI-alapú Chatbot Asszisztens</title>
   <script src="https://cdn.tailwindcss.com"></script>
@@ -28,6 +28,22 @@
     }
     body { background-color: var(--bg); color: var(--text-dark); margin: 0; }
     a { text-decoration: none; color: inherit; }
+
+    /* Voiceflow widget méret korlátozás mobilon */
+    @media (max-width: 768px) {
+      #voiceflow-chat,
+      [id*="voiceflow"],
+      [class*="vfrc-widget"] {
+        max-height: 55vh !important;
+        height: 55vh !important;
+        width: calc(100vw - 32px) !important;
+        max-width: calc(100vw - 32px) !important;
+        bottom: 80px !important;
+        right: 16px !important;
+        border-radius: 16px !important;
+        overflow: hidden !important;
+      }
+    }
 
     /* Navbar */
     .navbar {
@@ -2382,17 +2398,30 @@ document.addEventListener('click', function(e) {
             },
             assistant: {
               stylesheet: `
-                .vfrc-widget--chat {
+                :host {
+                  --vfrc-chat-width: 380px !important;
+                  --vfrc-chat-height: 560px !important;
+                }
+                .vfrc-widget--chat,
+                .vfrc-chat,
+                [class*="chat-window"],
+                [class*="chatWindow"] {
                   width: 380px !important;
                   height: 560px !important;
                   max-height: 70vh !important;
                   max-width: calc(100vw - 32px) !important;
+                  border-radius: 16px !important;
+                  overflow: hidden !important;
                 }
                 @media (max-width: 768px) {
-                  .vfrc-widget--chat {
+                  .vfrc-widget--chat,
+                  .vfrc-chat,
+                  [class*="chat-window"],
+                  [class*="chatWindow"] {
                     width: calc(100vw - 32px) !important;
-                    height: 65vh !important;
-                    max-height: 65vh !important;
+                    height: 55vh !important;
+                    max-height: 55vh !important;
+                    min-height: unset !important;
                     bottom: 80px !important;
                     right: 16px !important;
                     border-radius: 16px !important;
