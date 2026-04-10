@@ -7,14 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI Recepció — AI-alapú Chatbot Asszisztens</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script>
-    const _supabase = supabase.createClient(
-      'https://ygyxszkoildgnfumziox.supabase.co',
-      'sb_publishable_o_-Y3uObi1Mxho_G3WPMJw_BmkWzlPj'
-    );
-  </script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet"></noscript>
   <style>
     * { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; box-sizing: border-box; }
     html { scroll-behavior: auto; }
@@ -2374,6 +2370,16 @@ document.addEventListener('click', function(e) {
     a.addEventListener('click', closeMenu);
   });
 })();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+<script defer>
+  document.addEventListener('DOMContentLoaded', function() {
+    window._supabase = supabase.createClient(
+      'https://ygyxszkoildgnfumziox.supabase.co',
+      'sb_publishable_o_-Y3uObi1Mxho_G3WPMJw_BmkWzlPj'
+    );
+  });
 </script>
 
 <script type="text/javascript">
