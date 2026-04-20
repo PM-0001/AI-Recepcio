@@ -2063,6 +2063,7 @@ window.addEventListener('load', initTogglePill);
   };
 
   renderCalendar();
+  renderTimeSlots(now.getDay());
 
   window._calReset = function() {
     selectedDay  = null;
@@ -2071,8 +2072,7 @@ window.addEventListener('load', initTogglePill);
     window._calSelectedTime = null;
     var label = document.getElementById('cal-selected-label');
     if (label) label.textContent = 'Válassz napot...';
-    var timesContainer = document.getElementById('cal-times');
-    if (timesContainer) timesContainer.innerHTML = '';
+    renderTimeSlots(now.getDay());
     var box = document.getElementById('booking-summary');
     if (box) box.style.visibility = 'hidden';
     renderCalendar();
