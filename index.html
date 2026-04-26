@@ -2382,57 +2382,8 @@ document.addEventListener('click', function(e) {
   });
 </script>
 
-<script type="text/javascript">
-  (function(d, t) {
-    var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
-    v.onload = function() {
-      window.voiceflow.chat.load({
-        verify: { projectID: '69d517563b6a7a856cfcdd34' },
-        url: 'https://general-runtime.voiceflow.com',
-        versionID: 'production',
-        voice: {
-          url: "https://runtime-api.voiceflow.com"
-        },
-        assistant: {
-          stylesheet: `
-            :host {
-              --vfrc-chat-width: 380px !important;
-              --vfrc-chat-height: 560px !important;
-            }
-            .vfrc-widget--chat,
-            .vfrc-chat,
-            [class*="chat-window"],
-            [class*="chatWindow"] {
-              width: 380px !important;
-              height: 560px !important;
-              max-height: 70vh !important;
-              max-width: calc(100vw - 32px) !important;
-              border-radius: 16px !important;
-              overflow: hidden !important;
-            }
-            @media (max-width: 768px) {
-              .vfrc-widget--chat,
-              .vfrc-chat,
-              [class*="chat-window"],
-              [class*="chatWindow"] {
-                width: calc(100vw - 32px) !important;
-                height: 55vh !important;
-                max-height: 55vh !important;
-                min-height: unset !important;
-                bottom: 80px !important;
-                right: 16px !important;
-                border-radius: 16px !important;
-              }
-            }
-          `
-        }
-      });
-    };
-    v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs";
-    v.type = "text/javascript";
-    s.parentNode.insertBefore(v, s);
-  })(document, 'script');
-</script>
+<script async type='module' src='https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'></script>
+<zapier-interfaces-chatbot-embed is-popup='true' chatbot-id='cmobp0hd0002uv6sthsenlbrr'></zapier-interfaces-chatbot-embed>
 
 </body>
 </html>
